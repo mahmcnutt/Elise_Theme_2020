@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
+
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="https://78.media.tumblr.com/tumblr_lu2db46ekH1qfoi4t.png">
+
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+ 
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<meta name="color:background" content="#000000"/>
+<meta name="color:bold" content="#a70307"/>
+<meta name="color:italics" content="#5a5a5a"/>
+<meta name="color:links" content="#e52525"/>
+<meta name="color:links hover" content="#000000"/>
+<meta name="color:pag" content="#a70307"/>
+<meta name="color:pag hover" content="#000000"/>
+<meta name="color:title" content="#ffffff"/>
+<meta name="color:text" content="#ffffff"/>
+<meta name="color:sr" content="#ffffff"/>
+<meta name="color:album border" content="#ffffff"/>
+<meta name="color:song bg" content="#ffffff"/>
+<meta name="color:scrollbar" content="#000000"/>
+<meta name="color:qfirstletter" content="#a70307"/>
+<meta name="color:plinks" content="#000000"/>
+<meta name="color:plinks hover" content="#a70307"/>
+ 
+<meta name="image:background" content=""/>
+<meta name="image:desc" content=""/>
+<meta name="image:spider" content=""/>
+<meta name="image:flowers" content=""/>
+ 
+<style type="text/css">
+
+.floating{
+    float:left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3.75s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3.75s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 10px);}
+    to {-webkit-transform:translate(0, -0px);}
+}
+
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 10px);}
+    to {-moz-transform:translate(0, -0px);}
+}
+
+@font-face {font-family: "basicl";src: url('https://dl.dropboxusercontent.com/s/gcupkgtql0xvjge/basicl.ttf?dl=1'); format("truetype");}
+
+@font-face {font-family: "laine";src: url('https://dl.dropboxusercontent.com/s/q2nwfx6s9t3k759/laine.ttf?dl=1'); format("truetype");}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: {color:scrollbar};
+    height:3px;  
+    width:3px;
+}
+   
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: {color:scrollbar};
+    height:3px;
+    width:3px;
+    }
+   
+::-webkit-scrollbar {
+    background-color:transparent;
+    height:3px;
+    width:3px;
+    }
+ 
+body {
+    background:{color:background};
+    background-image:url('{image:background}');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:left 20px top 20px;
+    margin:0px;
+    color:{color:text};
+    font-family:trebuchet ms;
+    font-size:12px;
+    line-height:17px;
+    z-index:2;
+}
+ 
+b, em, strong{
+    color:{color:bold};
+    font-style: bold;
+    font-family:georgia;
+    font-size:14px;
+    text-shadow:1px 1px 5px {color:bold};
+    }
+ 
+i, em {
+    color:{color:italics};
+    font-style: italic;
+    font-family:georgia;
+    font-size:14px;
+    text-shadow:0px 0px 0px {color:italics};
+}
+
+small{
+    font-size:9px;
+}
+
+a{
+    text-decoration:none;
+    font-family:georgia;
+    color:{color:links};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+a:hover{
+    text-decoration:none;
+    color:{color:links hover};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+ 
+img {
+    -webkit-filter: grayscale(30%);
+}
+.html_photoset {    
+    -webkit-filter: grayscale(30%);
+}
+ 
+blockquote{
+    padding-left:5px;
+    border-left:1px solid #C7C7C7;
+}
+
+#a{
+    position:fixed;
+    margin-top:350px;
+    margin-left:300px;
+    font-family:georgia;
+    font-size:30px;
+    width:250px;
+    text-align:center;
+    line-height:25px;
+    color:transparent;
+    opacity:.7;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: {color:title};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+#hover{
+    position:fixed;
+    font-size:70px;
+    margin-top:180px;
+    margin-left:420px;
+    width:300px;
+    height:250px;
+    opacity:1;
+} 
+
+#hover a{
+    text-decoration:none;
+    font-family:georgia;
+    color:{color:hov links};
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+#hover a:hover{
+    text-decoration:none;
+    color:{color:hov links hover};
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+#info{
+    font-family:georgia;
+    color:black;
+    margin-left:20px;
+    margin-top:20px;
+    line-height:10px;
+    width:260px;
+    height:218px;
+    padding-top:85px;
+    font-size:11px;
+    text-align:center;
+    opacity:0;
+    background-image:url('{image:desc}');
+    background-repeat:no-repeat;
+     -moz-transition-duration: 0.8s;  
+    -webkit-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+}
+
+#info i{
+    color:{color:bold};
+    font-family:georgia;
+    font-style:italic;
+}
+
+#info b{
+    color:black;
+    font-family:georgia;
+    text-shadow:0px 0px 0px black;
+}
+
+#hover:hover #info{
+    position:fixed;
+    opacity:.9;
+     -moz-transition-duration: 0.8s;  
+    -webkit-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+}
+
+#flowers{
+    position:fixed;
+    height:388px;
+    width:245px;
+    margin-top:198px;
+    margin-left:558px;
+    background-image:url('{image:flowers}');
+    z-index:999;
+    opacity:.9;
+}
+
+#nav1{
+    position:fixed;
+    top:635px;
+    margin-left:100px;
+    opacity:1;
+}
+
+.web1{
+    background-color:white;
+    height:80px;
+    width:1px;
+    margin-top:-61px;
+    margin-left:14px;
+}
+ 
+#nav1 a{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav1 a:hover{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav2{
+    position:fixed;
+    top:595px;
+    margin-left:140px;
+    opacity:1;
+}
+
+.web2{
+    background-color:white;
+    height:45px;
+    width:1px;
+    margin-top:-30px;
+    margin-left:14px;
+}
+ 
+#nav2 a{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav2 a:hover{
+    text-shadow:0px 0px 6px {color:nav};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav3{
+    position:fixed;
+    top:620px;
+    margin-left:180px;
+    opacity:1;
+}
+
+.web3{
+    background-color:white;
+    height:80px;
+    width:1px;
+    margin-top:-65px;
+    margin-left:14px;
+}
+ 
+#nav3 a{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav3 a:hover{
+    text-shadow:0px 0px 6px {color:nav};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav4{
+    position:fixed;
+    top:580px;
+    margin-left:220px;
+    opacity:1;
+}
+
+.web4{
+    background-color:white;
+    height:60px;
+    width:1px;
+    margin-top:-80px;
+    margin-left:14px;
+}
+
+#nav4 a{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav4 a:hover{
+    text-shadow:0px 0px 6px {color:nav};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+ 
+#nav5{
+    position:fixed;
+    top:650px;
+    margin-left:260px;
+    opacity:1;
+}
+
+.web5{
+    background-color:white;
+    height:130px;
+    width:1px;
+    margin-top:-110px;
+    margin-left:14px;
+}
+
+#nav5 a{
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+
+#nav5 a:hover{
+    text-shadow:0px 0px 6px {color:nav};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+ 
+#pagination {
+    position:fixed;
+    width:430px;
+    display:inline-block;
+    position:fixed;
+    margin-left:105px;
+    margin-top:508px;
+    font-family:georgia;
+    font-size:14px;
+    text-align:center;
+    z-index:9;
+    transform: rotate(-12deg);
+}
+ 
+#pagination a{
+    color:{color:pag};
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+ 
+#pagination a:hover{
+    color:{color:pag hover};
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#postmargin{
+    margin-left:680px;
+    padding-top:90px;
+    padding-bottom:30px;
+    width:400px;
+}
+
+.posts{
+    margin-left:18px;
+    margin-top:10px;
+    margin-bottom:30px;
+    width:400px;
+    padding:7px;
+    background-color:transparent;
+    opacity:.8;
+    padding-bottom:30px;
+}
+
+.posts img{
+    max-width:100%;
+    height:auto;
+    width:auto;
+    opacity:1;
+}
+ 
+.posts iframe{
+    max-width:100%;
+}
+
+.q{
+    color:white;
+    float:left;
+    font-size:45px;
+    margin-top:20px;
+    margin-left:-30px;
+    font:georgia;
+}
+ 
+.msg{
+    background-color:transparent;
+    border-bottom:double white;
+    padding:5px;
+    padding-right:10px;
+    padding-left:10px;
+    font-family:georgia;
+}
+ 
+.sender{
+    text-align:right;
+    margin-left:-30px;
+    margin-top:10px;
+    font-size:25px;
+    font-family:laine;
+}
+
+.sender a{
+    font-family:laine;
+    font-style:bold;
+    font-size:30px;
+    color:{color:bold};
+}
+ 
+.answer{
+    padding-left:5px;
+}
+
+.quote{
+    margin-bottom:5px;
+    font-family:calibri light;
+    font-size:14px;
+}
+
+.quote{
+    font-size:12px;
+    margin-bottom:5px;
+    line-height:16px;
+    text-align:center;
+    letter-spacing:1px;
+    color:white;
+    font-style:italic;
+}
+ 
+.quote:first-letter{
+    font-family:laine;
+    font-size:28px;
+    color:{color:qfirstletter};
+    overflow:hidden;
+}
+
+.titles{
+    font-size:15px;
+    font-family:calibri light;
+    font-style:bold;
+    text-align:center;
+}
+
+.audioimg{
+    width:100px;
+    height:100px;
+    float: left;
+    margin-right: 5px;
+    border:7px solid white;
+}
+ 
+.audioplayer{
+    width:33px;
+    height:30px;
+    margin-left:345px;
+    margin-top:-30px;
+    overflow:hidden;
+    opacity:.5;
+}
+ 
+.tracks{
+    color:white;
+    width:98%;
+    height:80px;
+    padding-top:20px;
+    margin-top:5px;
+    line-height:45px;
+    letter-spacing:-1px;
+    font-family:basicl;
+    font-size:21px;
+    border:1px solid white;
+}
+ 
+.artists{
+    margin-top:-50px;
+    padding-bottom:20px;
+    margin-left:8px;
+    width:80%;
+    font-style:italic;
+    font-family:georgia;
+    border-top:1px solid {color:bold};
+    color:white
+}
+
+.permalink{
+    width:97%;
+    margin-top:10px;
+    padding:5px;
+    height:auto;
+    text-align:center;
+    background-color:{color:posts};
+    border-top:1px solid #a70307;
+}
+ 
+.permalink a{
+    color:{color:plinks};
+}
+ 
+.permalink a:hover{
+    color:{color:plinks hover};
+}
+ 
+.time{
+    text-align:left;
+    color:white;
+}
+
+.sv{
+    float:right;
+}
+ 
+.tags{
+    text-align:left;
+    margin-top:-3px;
+    margin-left:4px;
+}
+
+#notes{
+    text-align:left;
+}
+
+#s-m-t-tooltip{
+    max-width:300px;
+    background-color:black;
+    font-size:10px;
+    margin:20px 0px 0px 20px;
+    font-family:georgia;
+    text-transform:uppercase;
+    color:white;
+    letter-spacing:0px;
+    padding-right:6px;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:6px;
+    border:double white;
+}
+
+{CustomCSS}</style>
+
+<div id="hider"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+</head><body><div id="flowers"></div>
+
+<div id="a">
+</div>
+
+<div id="hover">
+    <div class="infobg"><div id="info"><i>Elise</i> from League of Legends,
+<br>as cherished by <b>Wersa</b>.
+
+<br><br>EST MAY 1ST 2016.
+<br>re-est march 29th 2020.
+    </div></div>
+</div>
+
+<div id="nav1">
+    <div class="floating">
+        <a href="/" title="return."><img src="{image:spider}"></a>
+    </div>
+    <div class="web1"></div>
+</div>
+
+<div id="nav2">
+    <div class="floating">
+        <a href="/ask" title="inquire."><img src="{image:spider}"></a>
+    </div>
+    <div class="web2"></div>
+</div>
+
+<div id="nav3">
+    <div class="floating">
+        <a href="/r" title="rules."><img src="{image:spider}"></a>
+    </div>
+    <div class="web3"></div>
+</div>
+
+<div id="nav4">
+    <div class="floating">
+        <a href="/a" title="dossier."><img src="{image:spider}"></a>
+        <div class="web4"></div>
+    </div>
+</div>
+
+<div id="nav5">
+    <div class="floating">
+        <a href="/n" title="navigation."><img src="{image:spider}"></a>
+    </div>
+    <div class="web5"></div>
+</div>
+
+
+
+    {block:Pagination}
+    <div id="pagination">
+{block:PreviousPage}<a href="{PreviousPage}">◀ retreat</a>{/block:PreviousPage}  {block:NextPage}<a href="{NextPage}">into the spider's web ▶</a>{/block:NextPage}
+    </div>
+    {/block:Pagination}
+
+<div id="postmargin">{block:Posts}<div class="posts">
+ 
+{block:Text}
+<div class="titles">
+    {block:Title}<i>{Title}</i>{/block:Title}
+</div>
+{Body}
+{/block:Text}
+ 
+{block:Photo}
+{LinkOpenTag}<img src="{PhotoURL-400}" width="400">{LinkCloseTag}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photo}
+ 
+{block:Photoset}
+{Photoset-400}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photoset}
+ 
+{block:Quote}
+<div class="quote">
+    {Quote}
+</div>
+{/block:Quote}
+ 
+{block:Link}
+<div class="link">
+    <a href="{URL}" {Target}>{Name}</a>
+</div>
+{block:Description}{Description}{/block:Description}
+{/block:Link}
+ 
+{block:Chat}
+{block:Title}<t>{Title}</t>{/block:Title}
+{block:Lines}
+    {block:Label}<b>{Label}</b>{/block:Label} {Line}<br>
+{/block:Lines}
+{/block:Chat}
+ 
+{block:Audio}
+{block:AlbumArt}<div class="audioimg"><img src="{AlbumArtURL}" alt="" height="50" width="50"></div>
+{/block:AlbumArt}
+<div class="tracks">{block:TrackName}{TrackName}{/block:TrackName}
+    <div class="audioplayer">{AudioPlayerWhite}</div>
+</div>
+<div class="artists">{block:Artist}{Artist}{/block:Artist}</div><br>
+{/block:Audio}
+ 
+{block:Video}
+{Video-400}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Video}
+ 
+{block:Answer}
+<div class="msg"><div class="q">❝</div>{Question}</div>
+<div class="sender">— {Asker}&nbsp;&nbsp;</div>
+<br><div class="answer">{Answer}</div>
+{/block:Answer}
+ 
+{block:ContentSource} <!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" /> {/block:SourceLogo} {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}--> {/block:ContentSource}
+
+
+<div class="permalink">
+ 
+{block:Date}
+<div class="time">
+【 {DayofMonth}.{MonthNumber}.{Year} 】
+{block:NoteCount}❤  {NoteCount}{/block:NoteCount}
+{/block:Date}
+
+<div class="sv">{block:RebloggedFrom}
+ <a href="{ReblogParentURL}" title="via"><font color="#3f3f3f">◯</font></a>
+<a href="{ReblogRootURL}" title="source"><font color="#3f3f3f">◯</font></a>
+{/block:RebloggedFrom}
+<a href="{Permalink}" title="{TimeAgo}"> <font color="#a70307"><font size="4px">❤</font></font></a>
+
+ </div></div>
+
+{block:HasTags}<div class="tags">{block:Tags} ▶<a href="{TagURL}">{Tag}</a> {/block:Tags}</div>{/block:HasTags}
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}  
+ 
+{/block:Posts}</div>
+
+</body></html>
